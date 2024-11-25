@@ -1,0 +1,168 @@
+/* Resetta margini e padding */
+body, ul {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Stile base del corpo */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+  }
+  
+  /* Navbar */
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #082646;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  
+  .navbar-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-item {
+    margin: 0;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.2s ease;
+  }
+  .nav-text {
+    text-decoration: none;
+    color: #FFD700;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .nav-link:hover {
+    color: #FFD700;
+    transform: scale(1.1);
+  }
+  
+  /* Contenitore principale */
+  main.content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 80px 20px; /* Offset aggiuntivo per la navbar */
+  }
+  
+  /* Stile scheda per ogni lobby */
+  .lobby-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 300px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .lobby-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Titolo del gioco */
+  .lobby-card h2 {
+    font-size: 1.5em;
+    color: #007BFF;
+    margin-bottom: 10px;
+  }
+  
+  /* Informazioni aggiuntive */
+  .lobby-card h3, 
+  .lobby-card p {
+    font-size: 1em;
+    margin: 5px 0;
+    color: #333;
+  }
+  
+  .lobby-card strong {
+    color: #555;
+  }
+  
+  /* Link */
+  .lobby-card a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .lobby-card a:hover {
+    color: #0056b3;
+  }
+  /* Stile per il dropdown nel menu */
+  #gameFilter {
+    background-color: #ffffff;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+  }
+
+  #gameFilter:hover {
+    border-color: #007bff;
+  }
+
+  #gameFilter:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+  }
+  button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #c0392b;
+  }
+  /* Stile per il footer */
+  footer.footer {
+    background-color: #082646;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 0.9rem;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  footer.footer a {
+    color: #FFD700;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+
+  footer.footer a:hover {
+    color: #FFF;
+  }

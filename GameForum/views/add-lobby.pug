@@ -1,0 +1,41 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Add Lobby
+    link(rel="stylesheet", href="/css/style.css")
+  body
+    .container
+      h1 Aggiungi una nuova Lobby
+      
+      form(action="/add" method="POST")
+        .form-group
+          label(for="game") Seleziona il gioco:
+          br
+          select(name="game" id="game" required)
+            each game in allGames
+              option(value=name)= game.name
+
+        .form-group
+          label(for="link") Link della Lobby:
+          br
+          p.error= error_link
+          input(type="url" name="link" id="link" placeholder="Inserisci il link della lobby" required)
+
+        .form-group
+          label(for="max_size") Numero massimo di partecipanti:
+          br
+          p.error= errore_max_size
+          input(type="number" name="max_size" id="max_size" min="2" placeholder="Inserisci il numero massimo" required)
+
+        .form-group
+          label(for="message") Messaggio (opzionale):
+          br
+          textarea(name="message" id="message" rows="3" placeholder="Inserisci un messaggio...")
+
+        .form-group
+          button(type="submit") Crea Lobby
+        .form-group
+          a(href="/home") Torna alla Home

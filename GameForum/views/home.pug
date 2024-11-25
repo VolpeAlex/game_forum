@@ -1,0 +1,59 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title= title
+    link(rel="stylesheet" href="/css/home-style.css") 
+  body
+    nav.navbar
+      ul.navbar-menu
+        li.nav-item
+          a.nav-link(href="/add") Add
+        li.nav-item
+          select(name="gameFilter" id="gameFilter" onchange="filterByGame(this.value)")
+            option(value="all" selected=(selectedGame === 'all')) All Games
+            each game in gamesArray
+              option(value=game.name selected=(selectedGame === game.name))= game.name
+        li.nav-item
+          a.nav-link(href="/logout") Logout
+        li.nav-item 
+          b.nav-text= username 
+
+    main.content
+      each val in lobbyArray
+        .lobby-card
+            h2= val.game
+            h3
+                strong Link: 
+                a(href=val.link target="_blank")= val.link
+            p
+                strong Massimo: 
+                | #{val.max_size} persone
+            p
+                strong Creatore: 
+                | #{val.leader}
+            p
+                strong Messaggio: 
+                | #{val.message}
+            p
+                strong Data: 
+                | #{val.date}
+            if val.leader === username
+                form(action=`/delete-lobby/${val._id}` method="POST" onsubmit="return confirm('Sei sicuro di voler eliminare questa lobby?')") 
+                    button(type="submit") Elimina
+
+
+  script.
+    function filterByGame(selectedGame) {
+      const url = selectedGame === 'all' ? '/home' : `/home?game=${encodeURIComponent(selectedGame)}`;
+      window.location.href = url;
+    }
+  footer.footer
+      p &copy; 2024 - Creato da Alex Volpe
+      p Contatti: 
+        a(href="mailto:alex.volpe@samtrevano.ch") alex.volpe@samtrevano.ch
+      p Sito: 
+        a(href="https://github.com/VolpeAlex" target="_blank") GitHub
+

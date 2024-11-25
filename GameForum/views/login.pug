@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    title= title
+    link(rel="stylesheet" href="/css/login.css")
+
+  body
+    
+    form(action="/login" method='POST')
+      h1=message
+      p.error=error_username
+      label(for="username") Username
+      input(type="text" name="username" id="username" required)
+      p.error=error_password
+      label(for="password") Password
+      input(type="password" name="password" id="password" required)
+      br
+      button(type="submit") Login
+      a(href='/sign-up') Sign Up
+    
+

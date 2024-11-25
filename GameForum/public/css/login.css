@@ -1,0 +1,97 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+  }
+  
+  /* Stile per il contenitore del form */
+  form {
+    background-color: #ffffff;
+    max-width: 320px; /* Limita la larghezza del form */
+    width: 100%;
+    padding: 2rem;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  /* Allinea il titolo al centro */
+  h1 {
+    text-align: center;
+    color: #333333;
+    font-size: 1.5rem;
+    margin: 1.5rem 0; /* Spazio sopra e sotto il titolo */
+  }
+  
+  /* Stile per le etichette e gli input */
+  label {
+    font-size: 0.9rem;
+    color: #555555;
+    margin-bottom: 0.5rem;
+  }
+  
+  input[type="text"],
+  input[type="password"],
+  input[type="date"] {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+  }
+  
+  /* Aggiungi stile per la gestione del focus */
+  input[type="text"]:focus,
+  input[type="password"]:focus,
+  input[type="date"]:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+  }
+  
+  /* Stile per il pulsante di accesso */
+  button {
+    padding: 0.75rem;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  a {
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
+    color: #007bff;
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+  
+  a:hover {
+    color: #0056b3;
+  }
+  
+  
+  /* Effetto per la gestione del focus sugli input */
+  input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+  }
+  .error{
+    color: red;
+  }

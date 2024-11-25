@@ -1,0 +1,13 @@
+doctype html
+html
+  head
+    title= title
+    link(rel="stylesheet" href="/css/users.css")
+  body
+    .users-container
+      each val in usersArray
+        .user-card
+          h2= val.username
+          p
+            strong Password: 
+            | #{val.password}
